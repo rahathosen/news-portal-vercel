@@ -2,6 +2,7 @@
 <html>
   <head>
     <title>Django News Portal Template</title>
+    <!-- <link rel="stylesheet" type="text/css" href="styles.css" /> -->
     <style>
       /* Center the content vertically and horizontally */
       .title {
@@ -22,6 +23,11 @@
         text-decoration: none;
         color: #007bff;
       }
+      #codebox {
+        border: gray solid 1px;
+        padding: 0;
+        margin: 0rem 20rem;
+      }
     </style>
   </head>
   <body>
@@ -31,6 +37,26 @@
     <div class="list">
       <a href="/admin/">Admin</a>
       <a href="/graphql/">GraphQL</a>
+    </div>
+    <h4 class="title">query sample</h4>
+    <div class="title" id="codebox">
+      <pre class="code-block" data-language="query">
+            <code>
+                query {
+                    allPost(categoryId: 1) {
+                      id
+                      title
+                      content
+                      author
+                      category {
+                        id
+                        name
+                      }
+                    }
+                  }
+                  
+            </code>
+        </pre>
     </div>
   </body>
 </html>
